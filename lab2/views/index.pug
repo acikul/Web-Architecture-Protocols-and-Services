@@ -1,0 +1,24 @@
+doctype html
+html
+    head
+        title= "APUW Lab2"
+        link(rel='stylesheet', href='/stylesheet/style.css')
+
+    body
+        block content
+            div.text-center 
+                h1 APUW chatroom
+                form(class="form-signin" method="POST", action="/enter")
+                    
+                    input(type="name" name="name" id="name" class="form-control" placeholder="username")
+
+                    input(type="radio" name="method", id="polling", value="polling")
+                    label(for="polling")  Polling       
+                    br
+                    input(type="radio" name="method", id="long_polling", value="long_polling")
+                    label(for="long_polling")  Long polling
+                    br
+                    input(type="radio" name="method", id="websocket", value="websocket")
+                    label(for="websocket")  WebSocket      
+                    br
+                    button(type="submit") Enter

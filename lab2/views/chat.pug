@@ -1,0 +1,26 @@
+doctype html
+html
+    head
+        title APUW chat - #{title}
+        link(rel='stylesheet', href='/stylesheet/style2.css')
+
+    body 
+        h1(class="center" id="h1") APUW chatroom
+        #settings-box 
+            span Your username: 
+            span#info-nickname= title
+            br
+            span Selected method: 
+            span#info-method= method
+
+        #chat-box 
+        #send 
+            input(type="text" id="send-box" onKeyDown="if(event.keyCode==13) sendMsg();")
+            button(id="send-btn" onClick="sendMsg()") Send
+    case method 
+        when "polling"
+            script(src='js/polling.js')
+        when "long_polling"
+            script(src='js/long_polling.js')
+        when "websocket"
+            script(src='js/websocket.js')

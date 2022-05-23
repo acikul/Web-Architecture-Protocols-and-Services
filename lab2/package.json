@@ -1,0 +1,18 @@
+{
+  "name": "projekt",
+  "version": "1.0.0",
+  "description": "2nd lab assingment for APUW",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Luka Ilić",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "8.2.0",
+    "express": "^4.17.2",
+    "pug": "3.0.2",
+    "query-string": "^7.1.0",
+    "ws": "^8.4.2"
+  }
+}
